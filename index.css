@@ -1,0 +1,459 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  /* height:1000000px; */
+}
+
+/* Navbar Styling */
+.navbar {
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Logo */
+.swiggy-logo {
+  height: 50px;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+.swiggy-logo:hover {
+  transform: translateY(-10px);
+  height: 55px;
+}
+
+/* .arrow-img {
+  width: 16px;
+  margin-left: 10px;
+  margin-bottom: 16px;
+} */
+
+/* Nav Icons */
+.nav-icon {
+  margin-right: 5px;
+}
+
+/* Badges */
+.badge-warning {
+  font-size: 0.7rem;
+  vertical-align: top;
+}
+
+/* Nav Link Hover Effects */
+.nav-link {
+  font-size: 1.1rem;
+}
+
+.nav-link:hover,
+.nav-link:focus,
+.nav-link:active {
+  color: #fc8019 !important;
+  transition: color 0.2s ease-in-out;
+}
+
+/* Responsive Styles */
+@media (max-width: 767.98px) {
+  .navbar-nav .nav-item {
+    padding: 5px 0;
+  }
+
+  .navbar-nav .nav-link {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  .dropdown-menu {
+    text-align: center;
+  }
+
+  .nav-link {
+    font-size: 1rem;
+  }
+}
+.home-page {
+  border-bottom: 2px inset #e8eaec;
+}
+/* Scrollable Food Section */
+.scroll-container {
+  position: relative;
+}
+
+
+/* ⬅️➡️ Scroll fade shadows */
+.scroll-container::before,
+.scroll-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 40px;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.scroll-container::before {
+  left: 0;
+  background: linear-gradient(to right, white 0%, transparent 100%);
+}
+
+.scroll-container::after {
+  right: 0;
+  background: linear-gradient(to left, white 0%, transparent 100%);
+}
+
+.scroll-wrapper {
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 10px 0;
+  scrollbar-width: none;      
+  -ms-overflow-style: none;   
+}
+
+.scroll-wrapper::-webkit-scrollbar {
+  display: none;             
+}
+  .scroll-row {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+
+.food-item {
+  flex: 0 0 auto;
+  text-align: center;
+  margin: 0 10px;
+  min-width: 120px;
+  height: 200px;
+  margin-top: -20px;
+}
+
+.food-item img {
+  width: 144px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.food-item img:hover {
+  transform: scale(1.05);
+}
+
+/* Scroll Buttons */
+.scroll-buttons {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  margin-top: -50px;
+}
+
+.scroll-buttons button {
+  border: none;
+  background: #D8D9DA;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  margin-left: 5px;
+  font-size: 18px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  margin-top: -20px;
+}
+@media (max-width: 991.98px) {
+  .scroll-buttons {
+    display: none;
+  }
+}
+.home-card{
+  height: 450px;
+  border-bottom: 2px inset #e8eaec;
+}
+.card {
+  border: none;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 100%;
+}
+
+
+.card-img {
+  height: 180px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  transition: transform 0.3s ease;
+}
+
+.card-img :hover {
+  transform: scale(1.05);
+}
+
+.card-img-overlay {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+  color: white;
+  font-weight: bold;
+  font-size: 1.1rem;
+  border-radius: 20px;
+}
+
+.rating {
+  color: green;
+  font-weight: bold;
+  font-size: 0.95rem;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.card-title {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.card-body small {
+  font-size: 0.85rem;
+  color: #555;
+}
+
+/* Carousel arrows */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #ccc;
+  border-radius: 50%;
+  padding: 20px;
+}
+
+/* Carousel indicators */
+.carousel-indicators li {
+  background-color: orange;
+  margin-bottom: -50px;
+}
+
+/* Scroll Buttons */
+.scroll-button,
+.scroll-btn {
+  position: absolute;
+  top: -40px;
+  border: none;
+  background: #D8D9DA;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 18px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  z-index: 10;
+}
+
+/* Right scroll button */
+.scroll-button {
+  right: 5px;
+}
+
+/* Left scroll button */
+.scroll-btn {
+  right: -900px;
+}
+
+/* Responsive grid adjustments */
+@media (max-width: 767.98px) {
+  
+  /* Make card full width */
+  .col-md-3 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 15px;
+  }
+
+  /* Make row horizontally scrollable */
+  .row {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Card snapping */
+  .card {
+    scroll-snap-align: start;
+    min-width: 90%;
+    margin: 0 auto;
+  }
+
+  /* Image sizing */
+  .card img {
+    height: 180px;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  /* Carousel item layout */
+  .carousel-inner {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .carousel-item {
+    flex: 0 0 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  /* Hide the second carousel slide */
+  .carousel-item:nth-child(2) {
+    display: none;
+  }
+
+  /* Hide the left and right arrow buttons */
+  .scroll-button,
+  .scroll-btn {
+    display: none;
+  }
+
+  /* Adjust carousel indicators position */
+  .carousel-indicators li {
+    margin-bottom: -30px;
+  }
+
+  /* Slightly smaller scroll buttons if you ever re-enable them */
+  .scroll-button,
+  .scroll-btn {
+    top: -35px;
+    width: 26px;
+    height: 26px;
+    font-size: 14px;
+  }
+}
+
+.btn-mrgn{
+  margin-top: 50px !important;
+}
+.filter-btn {
+  border-radius: 50px;
+  margin: 5px;
+  padding: 8px 10px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  transition: all 0.3s;
+  font-size: 12px;
+}
+.filter-btn:hover {
+  background-color: #97999b;
+}
+/* @media (max-width: 915px) {
+  .btn-mrgn{
+    margin-top: 50px !important;
+  }
+} */
+.rows {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.restaurant-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+.show-more {
+  color: #ff4d00;
+  font-weight: bold;
+  cursor: pointer;
+  
+}
+
+
+
+.footer {
+  background-color: #f6f6f6;
+  padding: 40px 0;
+  font-size: 1vw; /* Scale font based on screen width */
+  color: #4a4a4a;
+  
+  overflow: hidden;
+}
+.footer h6 {
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+.footer p, .footer a {
+  color: #4a4a4a;
+  text-decoration: none;
+  margin-bottom: 6px;
+}
+.footer a:hover {
+  text-decoration: underline;
+}
+.footer .app-buttons img {
+  max-height: 4vw;
+  margin-right: 10px;
+}
+.footer .logo {
+  font-size: 2vw;
+  font-weight: bold;
+  color: #fc8019;
+  display: flex;
+  align-items: center;
+}
+.footer .logo img {
+  height: 4vw;
+  margin-right: 10px;
+}
+.footer .social-icons i {
+  font-size: 1.5vw;
+  margin-right: 10px;
+  color: #4a4a4a;
+}
+.store-img {
+  margin-top:-15px;
+  margin-left: 30px;
+}
+.footer-row {
+  flex-wrap: nowrap;
+  overflow-x: hidden;
+}
+.play-app{
+  width: 150px;
+}
+
+/* Optional: for smoother viewing on small screens */
+@media (max-width: 768px) {
+  .footer {
+    padding: 20px 10px;
+    height: 320px;
+  }
+  
+  .footer-responsive{
+
+    margin-left: -850px;
+  }
+  .footer .container {
+    min-width: 1000px;
+    transform: scale(0.8);
+    transform-origin: top left;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer .container {
+    transform: scale(0.6);
+    transform-origin: top left;
+  }
+}
