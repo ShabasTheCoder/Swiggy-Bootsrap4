@@ -378,6 +378,9 @@ body {
   cursor: pointer;
   
 }
+.over{
+  overflow-x: hidden;
+}
 
 
 
